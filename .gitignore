@@ -1,0 +1,35 @@
+# Quarto files
+/.quarto/
+/_site/
+
+# R project files
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+
+# Mac OS files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data directories (customize as needed)
+/notebooks/viability/data_raw/
+/notebooks/viability/data_processed/
+/notebooks/qPCR/data_raw/
+/notebooks/qPCR/data_cleaned/
+/notebooks/qPCR/data_processed/
+/notebooks/qPCR/old_qPCR_import/
+/notebooks/qPCR/data_final_for_plotting/
+/notebooks/LCMS/data_raw/
+/notebooks/LCMS/data_processed/
+/notebooks/seq/data_raw/
+
+# Other project-specific directories
+/revisions/
+/.venv/
+
+# LaTeX files
+/trackchanges.sty

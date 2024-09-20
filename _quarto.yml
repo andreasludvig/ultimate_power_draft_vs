@@ -1,0 +1,23 @@
+project:
+  type: manuscript
+  render: 
+    - "*.qmd"
+    - "!notebooks/qPCR/old_qPCR_import/"
+    - "!notebooks/seq/GSEA.qmd"
+    #- "!notebooks/LCMS/"
+    - "!notebooks/LCMS/EC50/"
+    
+execute:
+  freeze: auto
+
+format:
+  html:
+    toc: true
+    comments:
+      hypothesis: true
+    # code-links: repo
+  docx: 
+    reference-doc: custom-reference-doc.docx
+  #jats: default
+  #pdf: default
+  #typst: default
