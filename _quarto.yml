@@ -15,7 +15,7 @@ format:
     toc: true
     comments:
       hypothesis: true
-    # code-links: repo
+    code-links: repo
   docx: 
     reference-doc: custom-reference-doc.docx
   #jats: default
