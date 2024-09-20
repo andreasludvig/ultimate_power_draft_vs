@@ -1,6 +1,7 @@
 # Quarto files
 /.quarto/
 /_site/
+/_manuscript
 
 # R project files
 .Rproj.user
@@ -33,3 +34,6 @@
 
 # LaTeX files
 /trackchanges.sty
+
+# Personal misc files
+TODO.md
