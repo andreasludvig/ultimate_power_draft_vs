@@ -1,11 +1,43 @@
 ---
-title: ultimate_power_draft
-authors:
-  - name: Norah Jones
-    affiliation: The University
-    roles: writing
-    corresponding: true
+title: Manuscript 1
+author:
+  - name: Andreas Ludvig Ohm Svendsen
+    orcid: 0000-0001-8050-6447
+    corresponding: true 
+    email: alosvendsen@health.sdu.dk
+    roles:
+      - Investigation
+      - Project administration
+      - Software
+      - Visualization
+    affiliations:
+      - SDU
+  - name: Erkka Järvinen
+    affiliations: 
+      - SDU?
+    corresponding: false
+  - name: Tore B. Stage
+    affiliations: 
+      - SDU
+    corresponding: false
+keywords:
+  - 3D primary human hepatocytes
+  - Inflammation
+  - Drug metabolism
+abstract: |
+  This is an abstract ...
+plain-language-summary: |
+  Some plain language summary...
+key-points:
+  - First keypoint.
+  - Second keypoint.
+date: last-modified
 bibliography: references.bib
+csl: vancouver.csl
+number-sections: false
+reference-location: margin
+lightbox: true
+notebook-links: global
 ---
 
 ## Section
