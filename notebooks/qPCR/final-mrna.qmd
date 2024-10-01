@@ -1,8 +1,9 @@
 ---
-title: "mRNA"
+title: "final mRNA"
 editor_options: 
   chunk_output_type: console
 ---
+This file is for creating final plots. Curated from the mRNA.qmd file. 
 
 All data manipulation was done before the start of this quarto manuscript project. Code is in: C:/Users/alosvendsen/OneDrive - Syddansk Universitet/PhD/R_code/manuscript_1 And copied to this project: /notebooks/qPCR/old_qPCR_import
 
@@ -14,16 +15,6 @@ Donor 1: timepoints = 72 and 120 hours Donor 2: timepoints = 24, 72, and 120 hou
 #| warning: false
 #| message: false
 
-# groundhog.date <- "2024-01-01"
-# groundhog::meta.groundhog(date = groundhog.date)
-
-# pckgs <- c("here",
-#            "data.table",
-#            "ggplot2",
-#            "patchwork",
-#            "RColorBrewer")
-
-# groundhog.library(pkg = pckgs, date = groundhog.date)
 library(here)
 library(data.table)
 library(ggplot2)
@@ -35,7 +26,7 @@ source(here("notebooks/qPCR/custom_functions.R"))
 ## Finalize the data and save the data table
 
 ### Load data, remove 0.001 ng/ml cytokine concentrations, calculate means for each experiment.
-
+Already done. Commented out. Final plot data i ./data_final_for_plotting/
 ```{r}
 #### Load data, filter data and calculate geometric means
 # data <- readRDS(here("notebooks/qPCR/data_processed/final_dataframe.rds"))
@@ -62,6 +53,7 @@ source(here("notebooks/qPCR/custom_functions.R"))
 ```
 
 ## Plots and downregulation data
+Load the plot data-
 
 ```{r}
 plot_data <- readRDS(here("notebooks/qPCR/data_final_for_plotting/plot_data.rds"))
@@ -335,10 +327,8 @@ combined_plot <- plot_IL1B + plot_IL6 +
 # Print the combined plot
 combined_plot
 
-# ggsave(filename = here("images/mrna_3A4_main.png"), device = "png", dpi = "retina")
+# ggsave(filename = here("images/mRNA/mrna_3A4_main.png"), device = "png", dpi = "retina")
 ```
-
-
 
 
 
@@ -382,6 +372,7 @@ tbl_CYP3A4_IL6 <-
 
 tbl_CYP3A4_IL6
 
+# fwrite(tbl_CYP3A4_IL6, file = "images/mRNA/tables/CYP3A4_IL6.csv")
 ```
 
 **Plot 3a4 il-6**
@@ -445,6 +436,7 @@ tbl_CYP3A4_IL1B <-
                by = .(treatment)]
 
 tbl_CYP3A4_IL1B
+# fwrite(tbl_CYP3A4_IL1B, file = "images/mRNA/tables/CYP3A4_IL1B.csv")
 ```
 
 **Plot IL-1B CYP3A4**
@@ -556,7 +548,7 @@ create_plot <- function(cyp_data) {
 plot_IL6 <- create_plot(cyp_data_IL6)
 plot_IL1B <- create_plot(cyp_data_IL1B)
 
-# View, save, or further manipulate these plots:
+# You can now view, save, or further manipulate these plots:
 plot_IL6
 plot_IL1B
 ```
