@@ -155,3 +155,7 @@ See @tbl-CYP3A4_IL6 for downregulation
 tbl_CYP3A4_IL1B <- data.table::fread("images/mRNA/tables/CYP3A4_IL1B.csv")
 knitr::kable(tbl_CYP3A4_IL1B)
 ```
+
+![](images/mRNA\main_new_IL6.png)
+
+![](images/mRNA\main_new_IL1B.png)
