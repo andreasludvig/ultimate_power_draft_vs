@@ -134,11 +134,13 @@ Within nine days from seeding the spheroid has formed and exhibit a tightly comp
 
 ### Effect of inflammatory cytokines on mRNA expression
 
-Employing the 3D model and more physiologically relevant concentrations of the pro-inflammatory cytokines IL-6 and IL-1β, we observed a dose-dependent downregulation of the transcription of the critical CYP3A4 enzyme, also at physiologically relevant concentrations, a notable finding that deviates from much of the existing literature (hører til I discussion, snarere end her?). Similar dose-dependent effects were seen with CYP1A2, 2B6, and 2D6 upon cytokine exposure, except for an unexpected upregulation of 2B6 after treatment with IL1-B. @fig-mrna-main
+Employing the 3D model and more physiologically relevant concentrations of the pro-inflammatory cytokines IL-6 and IL-1β, we observed a dose-dependent downregulation of the transcription of the critical CYP3A4 enzyme, also at physiologically relevant concentrations, a notable finding that deviates from much of the existing literature (hører til I discussion, snarere end her?). Similar dose-dependent effects were seen with CYP1A2, 2B6, and 2D6 upon cytokine exposure, except for an unexpected upregulation of 2B6 after treatment with IL1-B (@fig-mrna-main-il6 and @fig-mrna-main-il1b).
+
+![Normalized expression of CYP1A2, 2B6, 2D6 and 3A4 after treatment with IL-6. Black bars represents overall means. Remove controls in this and the other mrna main????](images/mRNA\plots\main_normalized_Expression_IL6.png){#fig-mrna-main-il6}
+
+![Normalized expression of CYP1A2, 2B6, 2D6 and 3A4 after treatment with IL-1B. Black bars represents overall means.](images/mRNA\plots\main_normalized_Expression_IL1B.png){#fig-mrna-main-il1b}
 
 No negative effect of the treatments on viability or morphology was observed (rather the reverse, likely due to the excessive handling of the plates for viability/morphology). (Har også viability for treatments. Plottes og tilføjes supp.?)
-
-![](images/mRNA\mrna_3A4_main.png){#fig-mrna-main}
 
 ```{r}
 #| label: tbl-CYP3A4_IL6
@@ -155,7 +157,3 @@ See @tbl-CYP3A4_IL6 for downregulation
 tbl_CYP3A4_IL1B <- data.table::fread("images/mRNA/tables/CYP3A4_IL1B.csv")
 knitr::kable(tbl_CYP3A4_IL1B)
 ```
-
-![](images/mRNA\main_new_IL6.png)
-
-![](images/mRNA\main_new_IL1B.png)
