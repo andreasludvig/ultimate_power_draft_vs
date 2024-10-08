@@ -36,7 +36,7 @@ Already done. Commented out. Final plot data i ./data_final_for_plotting/
 # plot_data <- data[!treatment %chin% c("0.001 ng/ml IL-1B", "0.001 ng/ml IL-6")]
 # 
 # 
-# # Calculate the mean expression grouped by experiment, condition, treatment, and time. USE GEOMETRIC MEAN when averaging normalized expression (RQ) values. 
+# # Calculate the mean expression grouped by experiment, condition, treatment, and time. USE GEOMETRIC MEAN when averaging normalized expression (RQ) values, since they are on a multiplicative scale. 
 # plot_data[,
 #           bio_group_mean_expression := geometric_mean(normalized_expression),
 #           by = .(experiment, condition, treatment, time, target)
