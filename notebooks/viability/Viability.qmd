@@ -103,33 +103,39 @@ mean_ATP <- mean_ATP[!(donor == 1 & day == 5)]
 plot_viability <- 
   ggplot(data = mean_ATP, 
          aes(x = day, 
-             y = mean_ATP, 
-             color = as.factor(donor),
-             shape = as.factor(donor))) +
-  geom_point(size = 7) +
-  scale_color_brewer(palette = "Set2") +
-  # scale_color_viridis_d(option = "plasma") +
+             y = mean_ATP)) +
+  geom_point(aes(fill = as.factor(donor),
+                 shape = as.factor(donor)),
+             size = 7, 
+             color = "black", 
+             stroke = 1) +
+  scale_fill_brewer(palette = "Set2") +
+  scale_shape_manual(values = c(21, 22, 24)) +  # Use filled shapes
   labs(title = "Absolute ATP content",
        x = "Day",
        y = "Mean ATP content (pmol/spheroid)",
-       color = "Donor",  # Rename the legend title
-       shape = "Donor") +  # Ensure this is the same as color
-  guides(color = guide_legend(), shape = guide_legend()) +  # Combine color and shape legends
+       fill = "Donor",
+       shape = "Donor") +
+  guides(fill = guide_legend(override.aes = list(shape = c(21, 22, 24))), 
+         shape = guide_legend()) +
   scale_y_continuous(limits = c(0, NA)) +
   scale_x_continuous(breaks = c(5, 7, 9, 12, 14, 16)) +
   theme_bw() +
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         legend.position = "bottom",
-        axis.title = element_text(face = "bold"))  
+        axis.title = element_text(face = "bold", size = 14),
+        axis.text = element_text(size = 12),
+        legend.title = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        plot.title = element_text(size = 16, face = "bold"))
 
-# plot_viability
+plot_viability
 
 # Best option for discrete viridis color scale: B, C, D, H
 
 # ggsave(filename = here("notebooks/viability/output/viability.png"),
 #        dpi = "retina")
-
 ```
 
 ```{r}
@@ -138,7 +144,14 @@ plot_viability <-
 
 plot_viability
 
-ggsave(filename = here("images/main_viability.png"), device = "png", dpi = "retina")
+ggsave(
+    filename = here("images/viability_morph/main_viability.png"),
+    plot = plot_viability,
+    device = "png",
+    width = 12,
+    height = 10,
+    dpi = "retina"
+)
 ```
 
 Number of replicates:
