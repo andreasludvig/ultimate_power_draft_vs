@@ -122,27 +122,25 @@ The quantification of human CYP ~~and transporter~~ proteins was performed using
 
 ### Viability and morphology
 
-in @fig-viability we see that a relatively stable viability during the first 9 days of culture, and stayed above 60 percent of the variability after spheroids formation. Viability for donor was stable throughout the experiment, for the timepoints measured. Donor 12 was stable for the first 9 days of the experiment, with a slight dropoff seen from day 12, but stable hereafter., never dropping below 60 % of the viability after spheroid formation. Donor 3 was stable for the first 12 days, with a slight dropoff hereafter. Furthermore, morpholgy was consistent throughout the experiment, disregardign a tendency for the spheroids to shrink during the experimentm, which might be due to compaction or shedding of cells?(main speroid article had atp relative to size).
+The viability of the spheroids was monitored through measurements of absolute ATP content over a 16-day culture period (@fig-viability). Spheroids from each donor maintained viable ATP levels throughout the experiment. While donor-dependent variation is observed, ATP content remained above 60 % relative to post-formation values across all donors. Donor 1 maintained ATP levels between 13-17 pmol/spheroid, while Donor 3 showed values ranging from 10.5-17 pmol/spheroid. Donor 2 exhibited a gradual decrease in ATP content from approximately 12 to 7 pmol/spheroid, while still maintaining viable levels. Within nine days from seeding the spheroids formed and exhibits a tightly compacted appearance (@fig-morph). Morphology was consistent throughout the experiment, disregarding a tendency for the spheroids to shrink during the experiments. This might be due to compaction of the cells and/ore shedding of non-viable cells (main spheroid article had ATP relative to size instead of absolute viability!). In conjunction these results indicate that the cell system supports long-term maintenance, and repeated dosing of interleukines.
 
-Some loss of viability or metabolic activity cannot be ruled out, however this should not be a major concern since we are looking at relative data within each timepoints.
-
-Within nine days from seeding the spheroid has formed and exhibit a tightly compacted appearance @fig-morph
+~~Some loss of viability or metabolic activity cannot be ruled out, however this should not be a major concern since we are looking at relative data within each timepoints.~~
 
 ![Absolute viability. Each point is the mean ATP content of 5-8 spheroids/replicates (mean = 7). Missing data for for donor 1 on day 5 and 16. Data for donor 3 day 9 was measured on day 10](images/viability_morph\main_viability.png){#fig-viability}
 
 ![Morphology for donors one, two, and three. Photos from the same well for each donor throughout the experiment. Scale bars represent 200 µm.](images/viability_morph\morph.png){#fig-morph width="4500"}
 
-![Morphology for donors one, two, and three. Photos from the same well for each donor throughout the experiment. Scale bars represent 200 µm.](images/viability_morph\morph.png){width="4500"}
-
 ### Effect of inflammatory cytokines on mRNA expression
 
-Employing the 3D model and more physiologically relevant concentrations of the pro-inflammatory cytokines IL-6 and IL-1β, we observed a dose-dependent downregulation of the transcription of the critical CYP3A4 enzyme, also at physiologically relevant concentrations, a notable finding that deviates from much of the existing literature (hører til I discussion, snarere end her?). Similar dose-dependent effects were seen with CYP1A2, 2B6, and 2D6 upon cytokine exposure, except for an unexpected upregulation of 2B6 after treatment with IL1-B (@fig-mrna-main-il6 and @fig-mrna-main-il1b).
+Treatment of the 3D hepatocyte spheroids with pro-inflammatory cytokines IL-6 and IL-1β resulted in concentration-dependent changes in CYP enzyme expression. Both cytokines induced a dose-dependent downregulation of CYP3A4 mRNA expression, even at physiologically relevant concentrations. Similar dose-dependent suppression was observed for CYP1A2 and CYP2D6. CYP2B6 showed differential responses to the two cytokines: IL-6 treatment led to decreased expression, while IL-1β induced a concentration-dependent upregulation, reaching approximately 1.7-fold increase at the highest concentration (10 ng/mL). These effects were consistent across time points, with the most pronounced changes observed at higher cytokine concentrations (@fig-mrna-main-il6 and @fig-mrna-main-il1b).
 
-![Normalized expression of CYP1A2, 2B6, 2D6 and 3A4 after treatment with IL-6. Black bars represents overall means. Remove controls in this and the other mrna main????](images/mRNA\plots\main_normalized_Expression_IL6.png){#fig-mrna-main-il6}
+![Normalized expression of CYP1A2, 2B6, 2D6 and 3A4 after treatment with IL-6. Black bars represents overall means. ](images/mRNA\plots\main_normalized_Expression_IL6.png){#fig-mrna-main-il6}
 
 ![Normalized expression of CYP1A2, 2B6, 2D6 and 3A4 after treatment with IL-1B. Black bars represents overall means.](images/mRNA\plots\main_normalized_Expression_IL1B.png){#fig-mrna-main-il1b}
 
 No negative effect of the treatments on viability or morphology was observed (rather the reverse, likely due to the excessive handling of the plates for viability/morphology). (Har også viability for treatments. Plottes og tilføjes supp.?)
+
+Plots with means grouped by donor is in supplementary.
 
 ```{r}
 #| label: tbl-CYP3A4_IL6
@@ -159,3 +157,33 @@ See @tbl-CYP3A4_IL6 for downregulation
 tbl_CYP3A4_IL1B <- data.table::fread("images/mRNA/tables/CYP3A4_IL1B.csv")
 knitr::kable(tbl_CYP3A4_IL1B)
 ```
+
+## **Discussion**
+
+5 linjers summary
+
+### **Limitations**
+
+One of the main limitations of this study is the limited number of biological donors. This constraint may affect the generalizability of our findings across a broader population due to the inherent genetic and metabolic variability among individuals. Such variability can influence the expression and function of CYP enzymes, potentially leading to variations in drug metabolism that are not captured within the scope of our study.
+
+### **Strengths**
+
+However, the study also has notable strengths that may contribute insights into the field of inflammation and drug metabolism. Firstly, the integration of both transcriptomic and metabolomic data provides a better understanding of the IL-6 and IL1-β induced alterations in CYP enzyme functions.
+
+Secondly, the employment of a relatively novel cell model, utilizing primary human hepatocytes (PHHs), for the study of hepatocyte drug metabolism represents a significant advancement. The use of PHHs ensures a higher degree of physiological relevance compared to traditional cell lines or non-human models. PHHs maintain the expression of key drug-metabolizing enzymes and transporters, thereby offering a more accurate reflection of human liver metabolism. This choice of model enhances the applicability of our findings to clinical settings, providing insights that may help gap the bridge between in vitro in vivo translation.
+
+Moreover, the application of 3D culture techniques in modeling hepatocyte function further strengthens our study. 3D cultures have been shown to more closely mimic the in vivo liver microenvironment, supporting the maintenance of hepatocyte phenotype and function over extended periods. This approach allows for a more nuanced exploration of drug metabolism and toxicity, potentially leading to more predictive and reliable assessments of pharmacokinetics and pharmacodynamics in humans.
+
+### **Comparisons**
+
+sammenlign med tidligere studier: AC og og errkas review plus karolinska
+
+### **Perspective**
+
+Incorporating the advancements in 3D primary human hepatocyte cultures into PBPK modeling might lead towards more accurate and reliable predictions of drug behavior in the human body. This integration has the potential to streamline pharmaceutical development processes, offering a dual benefit: reducing development costs and minimizing unnecessary exposure of study participants to experimental drugs. By more accurately simulating human liver physiology, these advanced models can improve the predictive power of PBPK simulations, thus optimizing drug development strategies and safeguarding participant well-being.
+
+## Supplementary materials
+
+![](images/mRNA\plots\supp_normalized_expression_IL6_group_donor.png){#fig-mrna_by_donor}
+
+![](images/mRNA\plots\supp_normalized_expression_IL1B_group_donor.png){#fig-mrna-by-donor}
