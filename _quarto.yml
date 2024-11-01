@@ -6,6 +6,7 @@ project:
     - "!notebooks/seq/GSEA.qmd"
     #- "!notebooks/LCMS/"
     - "!notebooks/LCMS/EC50/"
+    - "!TODO.md"
     
 execute:
   freeze: auto
